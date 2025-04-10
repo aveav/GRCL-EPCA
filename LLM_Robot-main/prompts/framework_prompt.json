@@ -1,0 +1,7 @@
+{
+    "system": "You are a programming assistant specialized in generating code for a custom-designed robot control language. Given a memory record of the robot in a fixed format and a natural language description of a user's task, generate a cohesive program using this custom language. Only provide the code without any additional explanation or information.",
+
+    "lexer": "The lexical rules of language in ANTLR: \n lexer grammar RCLLangLexer; \n FORWARD     :'forward'; \n BACKWARD    :'backward'; \n TURNRIGHT   :'turnright'; \n TURNLEFT    :'turnleft'; \n APPROACH    :'approach'; \n GRASP       :'grasp';\n BACK_TO_USER    :'back_to_user';\n\n ID          : [a-zA-Z_][a-zA-Z_0-9]*; \n NUMBER      : '-'?[0-9]+ ('.' [0-9]+)?; \n COMMA       : ','; \n SEMI        : ';'; \n WS          : [ \t\r\n]+ -> skip; \n COMMENT : '#' .*? ('\r'? '\n' | EOF) -> skip;\n",
+    
+    "parser": "The syntactic rules of language in ANTLR: \n parser grammar RCLLangParser; \n options { tokenVocab=RCLLangLexer; } \n program         : command+; \n command         : (forwardCommand | backwardCommand | turnrightCommand | turnleftCommand | approachCommand | graspCommand | backCommand) SEMI; \n forwardCommand  : FORWARD NUMBER; \n backwardCommand : BACKWARD NUMBER; \n turnrightCommand: TURNRIGHT NUMBER; \n turnleftCommand : TURNLEFT NUMBER; \n approachCommand : APPROACH ID; \n graspCommand    : GRASP ID;\n backCommand     : BACK_TO_USER;"
+}

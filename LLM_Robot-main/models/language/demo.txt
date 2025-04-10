@@ -1,0 +1,10 @@
+slam;
+perceive;
+
+obj_list = get_operable_objects;
+
+if "cup" in obj_list{
+    approach "cup";
+    grasp "cup";
+}
+

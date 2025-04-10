@@ -1,0 +1,22 @@
+{
+    "backward" : {
+        "task" : "go backward 1 meter: \n",
+        "program": "``` \n    backward 1; \n ```"
+    },
+    "forward" : {
+        "task" : "go forward 1 meter: \n",
+        "program": "``` \n    forward 1; \n ```"
+    },
+    "turnright" : {
+        "task" : "turn right about 1 rad: \n",
+        "program": "``` \n    turnright 1; \n ```"
+    },
+    "turnleft" : {
+        "task" : "turn left about 1 rad: \n",
+        "program": "``` \n    turnleft 1; \n ```"
+    },
+    "branch": {
+        "task": "if you see a bottle,approach the bottle!\n",
+        "program": "``` \nslam;\nperceive;\n\nobj_list = get_operable_objects;\n\nif \"bottle\" in obj_list{\n    approach \"bottle\";\n    grasp \"bottle\";\n}\n```"
+    }
+}

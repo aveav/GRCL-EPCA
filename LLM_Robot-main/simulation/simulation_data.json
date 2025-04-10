@@ -1,0 +1,29 @@
+[
+    {
+        "objects": {
+            "cup": [2, 3],
+            "table": [5, 6]
+        },
+        "user_position": [1, 1],
+        "robot_position": [0, 0],
+        "obstacles": [[3, 3], [4, 5]]
+    },
+    {
+        "objects": {
+            "cup": [2, 4],
+            "table": [6, 6]
+        },
+        "user_position": [1, 2],
+        "robot_position": [1, 1],
+        "obstacles": [[3, 4], [4, 6]]
+    },
+    {
+        "objects": {
+            "chair": [7, 8],
+            "sofa": [10, 12]
+        },
+        "user_position": [2, 3],
+        "robot_position": [2, 2],
+        "obstacles": [[5, 5], [6, 7]]
+    }
+]

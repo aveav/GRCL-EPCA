@@ -1,0 +1,37 @@
+obj_list = get_operable_objects;
+if "bottle" in obj_list{
+    forward 100;
+
+    while "apple" in obj_list{
+        grasp "apple";
+
+        for 1 to 100{
+            if "bottle" in obj_list{
+                forward 100;
+            }else if "cup" in obj_list{
+                goto 0,0;
+            }else{
+                goto 0,0;
+            }
+        }
+
+        while "apple" in obj_list{
+            grasp "apple";
+
+            for 1 to 100{
+                if "bottle" in obj_list{
+                    forward 100;
+                }else if "cup" in obj_list{
+                    goto 0,0;
+                }else{
+                    goto 0,0;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+goto 1,2;

@@ -1,0 +1,6 @@
+{
+    "1": {
+        "task": "I'm hungry!: \n",
+        "program": "``` \n    backward 1; \n ```\n# I‘m hungry!\nslam；\nperceive;\n\nobj_list = get_operable_objects;\n\nif \"food\" in obj_list{\n    approach \"food\";\n    grasp \"food\";\n}else{\n    # can't find the objects,try to explore\n\n    while \"food\" notin obj_list\n    {\n        turnleft 5；\n        x = get_max_forward_distance;\n        if x > 0{\n            forward x;\n        }\n        obj_list = get_operable_objects;\n    }\n\n    obj_list = get_operable_objects;\n    approach \"food\";\n    grasp \"food\";\n}\n\n# back to user\ngoto 0,0;\nrelease;"
+    }
+}
