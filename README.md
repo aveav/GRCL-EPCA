@@ -9,7 +9,7 @@ In the MIT benchmark for robot instruction following, the framework achieved a 9
 ## 二、项目结构与核心模块
 
 ### 结构
-
+```
 GRCL-EPCA/
 ├── LLM_Robot-main/
 │   ├── models/
@@ -42,7 +42,7 @@ GRCL-EPCA/
 │   ├── .gitignore
 │   └── pom.xml
 └── README.md
-
+```
 
 ### （一）LLM_Robot 模块
 
@@ -122,7 +122,7 @@ GRCL-EPCA/
 ## 三、使用示例
 
 以下是一个使用示例，展示如何使用 `SystemController` 类处理用户任务：
-
+```
 {
 from models.framework import SystemController
 simulation_file = "simulation/simulation_data.json"
@@ -132,10 +132,12 @@ task = "I'm thirsty!"
 controller.launch_system(task)
 controller.shutdown_system()
 }
+```
 ## 四、总结
 The GRCL - EPCA project effectively enhances the accuracy and robustness of natural language to robot action planning by introducing the RSL language and various verification mechanisms. The project has a clear structure, with each module having a well-defined division of labor. The SystemController class can conveniently coordinate all modules to complete user tasks. During the usage process, attention should be paid to issues such as the simulation mode and remote server configuration to ensure the normal operation of the system.
 
 ## Citation
+```
 @misc{GRCL - EPCA,
   title = {GRCL - EPCA: A Natural Language to Robot Action Planning Intelligent Framework Based on LLM},
   author = {}, 
@@ -143,5 +145,6 @@ The GRCL - EPCA project effectively enhances the accuracy and robustness of natu
   year = { },
   note = { }
 }
+```
 
 
